@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jms="http://xsd.tns.tibco.com/bw/models/sharedresource/jms" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_py3MwUfKEeSm1b1P_njtyg" name="tibco.bw.sample.palette.jms.TopicDurableSubscriber.EMSDefaultJNDIConfiguration" type="jms:JNDIConnection">
+  <jndi:configuration xsi:type="jms:JNDIConnectionConfiguration" xmi:id="_py3MwkfKEeSm1b1P_njtyg">
+    <substitutionBindings xmi:id="_I9rC8EfLEeSm1b1P_njtyg" template="initialContextFactory" propName="InitialContextFactory"/>
+    <substitutionBindings xmi:id="_JMjMcEfLEeSm1b1P_njtyg" template="providerUrl" propName="NamingProviderURL"/>
+  </jndi:configuration>
+</jndi:namedResource>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:jms="http://xsd.tns.tibco.com/bw/models/sharedresource/jms" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_BhIFwEezEeSm1b1P_njtyg" targetNamespace="http://tns.tibco.com/bw/composite/tibco.bw.sample.palette.jms.MessageSelector" name="tibco.bw.sample.palette.jms.MessageSelector" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_Bn9GgEezEeSm1b1P_njtyg" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_BoAw4EezEeSm1b1P_njtyg" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_BoDNIEezEeSm1b1P_njtyg" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_BoFCUEezEeSm1b1P_njtyg" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_BoIFoEezEeSm1b1P_njtyg" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_BoJ60EezEeSm1b1P_njtyg" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_BoMXEEezEeSm1b1P_njtyg" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_BoOzUEezEeSm1b1P_njtyg" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_BoR2oEezEeSm1b1P_njtyg" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_KoBY0EezEeSm1b1P_njtyg" name="JMS_CONNECTION" type="jms:JMSConnectionFactory" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_O-pa0EezEeSm1b1P_njtyg" name="QUEUE_NAME" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_RcogMEezEeSm1b1P_njtyg" name="NamingProviderURL" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_TtSUMEezEeSm1b1P_njtyg" name="QueueConnectionFactory" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Wh80MEezEeSm1b1P_njtyg" name="TopicConnectionFactory" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_ZGDvsEezEeSm1b1P_njtyg" name="InitialContextFactory" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_cIAdwEezEeSm1b1P_njtyg" name="OUTPUT_FILE" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_BkneoEezEeSm1b1P_njtyg" name="ComponentMessageSelector" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_BkneoUezEeSm1b1P_njtyg" processName="tibco.bw.sample.palette.jms.messageselector.MessageSelector"/>
+  </sca:component>
+</sca:composite>
