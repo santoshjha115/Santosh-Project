@@ -1,0 +1,960 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions name="EBIBrokerWebServiceImplService" targetNamespace="http://impl.webservice.services.broker.edicom.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://impl.webservice.services.broker.edicom.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns3="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="UEBIBrokerInterface">
+  <wsdl:import location="./EBIBroker.wsdl" namespace="UEBIBrokerInterface">
+    </wsdl:import>
+  <wsdl:binding name="EBIBrokerWebServiceImplServiceSoapBinding" type="ns1:UEBIBrokerInterfacePortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="TEBIBrokerInterface_MessageID">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_MessageID" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_MessageID">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_MessageIDResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ConfirmSubscriptionWS">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_ConfirmSubscriptionWS" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_ConfirmSubscriptionWS">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_ConfirmSubscriptionWSResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="EBIBrokerServerException">
+        <soap:fault name="EBIBrokerServerException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_MessageList">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_MessageList" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_MessageList">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_MessageListResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_RejectedPublicationsWS">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_RejectedPublicationsWS" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_RejectedPublicationsWS">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_RejectedPublicationsWSResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="EBIBrokerServerException">
+        <soap:fault name="EBIBrokerServerException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_MessageInfo">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_MessageInfo" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_MessageInfo">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_MessageInfoResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_TransformationExA">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_TransformationExA" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_TransformationExA">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_TransformationExAResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_RemoteAdpterSQLA">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_RemoteAdpterSQLA" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_RemoteAdpterSQLA">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_RemoteAdpterSQLAResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ExecuteSQL">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_ExecuteSQL" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_ExecuteSQL">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_ExecuteSQLResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_GetProcessesWS">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_GetProcessesWS" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_GetProcessesWS">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_GetProcessesWSResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="EBIBrokerServerException">
+        <soap:fault name="EBIBrokerServerException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_RegisterSession">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_RegisterSession" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_RegisterSession">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_RegisterSessionResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="EBIBrokerServerException">
+        <soap:fault name="EBIBrokerServerException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ReleaseApplication">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_ReleaseApplication" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_ReleaseApplication">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_ReleaseApplicationResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_SchemaFiles">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_SchemaFiles" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_SchemaFiles">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_SchemaFilesResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ChangeDocumentProperty">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_ChangeDocumentProperty" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_ChangeDocumentProperty">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_ChangeDocumentPropertyResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_DoIsAlive">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_DoIsAlive" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_DoIsAlive">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_DoIsAliveResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_GetScript">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_GetScript" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_GetScript">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_GetScriptResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_NotifiedRejectedPublicationWS">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_NotifiedRejectedPublicationWS" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_NotifiedRejectedPublicationWS">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_NotifiedRejectedPublicationWSResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="EBIBrokerServerException">
+        <soap:fault name="EBIBrokerServerException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_MessageTrace">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_MessageTrace" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_MessageTrace">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_MessageTraceResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_GetLastJobWS">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_GetLastJobWS" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_GetLastJobWS">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_GetLastJobWSResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="EBIBrokerServerException">
+        <soap:fault name="EBIBrokerServerException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_CommitTrans">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_CommitTrans" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_CommitTrans">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_CommitTransResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_TransformationSchemas">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_TransformationSchemas" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_TransformationSchemas">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_TransformationSchemasResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ExecuteScriptWS">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_ExecuteScriptWS" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_ExecuteScriptWS">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_ExecuteScriptWSResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_GetMessageA">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_GetMessageA" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_GetMessageA">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_GetMessageAResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ConfirmedPublicationsWS">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_ConfirmedPublicationsWS" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_ConfirmedPublicationsWS">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_ConfirmedPublicationsWSResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="EBIBrokerServerException">
+        <soap:fault name="EBIBrokerServerException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_Transformation">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_Transformation" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_Transformation">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_TransformationResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_RegisterSessionU">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_RegisterSessionU" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_RegisterSessionU">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_RegisterSessionUResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="EBIBrokerServerException">
+        <soap:fault name="EBIBrokerServerException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_GetConnectBdParams">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_GetConnectBdParams" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_GetConnectBdParams">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_GetConnectBdParamsResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_IsConfirmedSubscription">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_IsConfirmedSubscription" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_IsConfirmedSubscription">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_IsConfirmedSubscriptionResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_SubscriptionsList">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_SubscriptionsList" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_SubscriptionsList">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_SubscriptionsListResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_GetRepositoryItem">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_GetRepositoryItem" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_GetRepositoryItem">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_GetRepositoryItemResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_Release">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_Release" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_Release">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_ReleaseResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_UpdateTimeStamp">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_UpdateTimeStamp" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_UpdateTimeStamp">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_UpdateTimeStampResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_GetTransformationA">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_GetTransformationA" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_GetTransformationA">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_GetTransformationAResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_DBType">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_DBType" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_DBType">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_DBTypeResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_RollbackTrans">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_RollbackTrans" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_RollbackTrans">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_RollbackTransResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_CheckAdapterConfigVersion">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_CheckAdapterConfigVersion" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_CheckAdapterConfigVersion">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_CheckAdapterConfigVersionResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_DocumentDelete">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_DocumentDelete" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_DocumentDelete">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_DocumentDeleteResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ExecuteProcessWS">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_ExecuteProcessWS" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_ExecuteProcessWS">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_ExecuteProcessWSResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="EBIBrokerServerException">
+        <soap:fault name="EBIBrokerServerException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ExecuteSQLA">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_ExecuteSQLA" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_ExecuteSQLA">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_ExecuteSQLAResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_RemoteAdpterSQL">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_RemoteAdpterSQL" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_RemoteAdpterSQL">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_RemoteAdpterSQLResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ProcessExecuted">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_ProcessExecuted" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_ProcessExecuted">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_ProcessExecutedResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_SendLog">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_SendLog" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_SendLog">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_SendLogResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_EndSession">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_EndSession" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_EndSession">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_EndSessionResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ProcessShouldExecuted">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_ProcessShouldExecuted" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_ProcessShouldExecuted">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_ProcessShouldExecutedResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_RegisterSocketSession">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_RegisterSocketSession" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_RegisterSocketSession">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_RegisterSocketSessionResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_EBIBrokerStatusEx">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_EBIBrokerStatusEx" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_EBIBrokerStatusEx">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_EBIBrokerStatusExResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_CheckAdapterVersionA">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_CheckAdapterVersionA" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_CheckAdapterVersionA">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_CheckAdapterVersionAResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_CheckAdapterConfigVersionA">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_CheckAdapterConfigVersionA" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_CheckAdapterConfigVersionA">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_CheckAdapterConfigVersionAResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_EBIObjects">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_EBIObjects" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_EBIObjects">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_EBIObjectsResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_Schema">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_Schema" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_Schema">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_SchemaResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_SubscriptionA">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_SubscriptionA" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_SubscriptionA">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_SubscriptionAResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_GetTransformation">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_GetTransformation" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_GetTransformation">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_GetTransformationResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ChangeDocumentState">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_ChangeDocumentState" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_ChangeDocumentState">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_ChangeDocumentStateResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_PublishDestination">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_PublishDestination" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_PublishDestination">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_PublishDestinationResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_EBIBrokerStatus">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_EBIBrokerStatus" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_EBIBrokerStatus">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_EBIBrokerStatusResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_NotifiedRejectedPublication">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_NotifiedRejectedPublication" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_NotifiedRejectedPublication">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_NotifiedRejectedPublicationResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_PostFile">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_PostFile" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_PostFile">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_PostFileResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ActiveProcess">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_ActiveProcess" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_ActiveProcess">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_ActiveProcessResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ExecuteTemplate">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_ExecuteTemplate" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_ExecuteTemplate">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_ExecuteTemplateResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_SubsAndTransforA">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_SubsAndTransforA" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_SubsAndTransforA">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_SubsAndTransforAResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_SubscriptionsPending">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_SubscriptionsPending" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_SubscriptionsPending">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_SubscriptionsPendingResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_MessageReference">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_MessageReference" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_MessageReference">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_MessageReferenceResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ConfirmedPublications">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_ConfirmedPublications" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_ConfirmedPublications">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_ConfirmedPublicationsResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ApplicationList">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_ApplicationList" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_ApplicationList">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_ApplicationListResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_EBIBrokerVersion">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_EBIBrokerVersion" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_EBIBrokerVersion">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_EBIBrokerVersionResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ConfirmSubscriptionEx">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_ConfirmSubscriptionEx" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_ConfirmSubscriptionEx">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_ConfirmSubscriptionExResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_IsConfirmedPublication">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_IsConfirmedPublication" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_IsConfirmedPublication">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_IsConfirmedPublicationResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_DocumentList">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_DocumentList" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_DocumentList">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_DocumentListResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_RemoteSQL">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_RemoteSQL" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_RemoteSQL">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_RemoteSQLResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_AcquireApplication">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_AcquireApplication" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_AcquireApplication">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_AcquireApplicationResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_GetFile">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_GetFile" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_GetFile">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_GetFileResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_BeginTrans">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_BeginTrans" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_BeginTrans">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_BeginTransResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_FileFoundEx">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_FileFoundEx" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_FileFoundEx">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_FileFoundExResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_CheckAdapterVersion">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_CheckAdapterVersion" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_CheckAdapterVersion">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_CheckAdapterVersionResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_RejectSubscriptionWS">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_RejectSubscriptionWS" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_RejectSubscriptionWS">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_RejectSubscriptionWSResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="EBIBrokerServerException">
+        <soap:fault name="EBIBrokerServerException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_RejectedPublications">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_RejectedPublications" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_RejectedPublications">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_RejectedPublicationsResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_SubscriptionSource">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_SubscriptionSource" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_SubscriptionSource">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_SubscriptionSourceResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_SubsAndTransfor">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_SubsAndTransfor" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_SubsAndTransfor">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_SubsAndTransforResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_UpdateTimeStampTimeOut">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_UpdateTimeStampTimeOut" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_UpdateTimeStampTimeOut">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_UpdateTimeStampTimeOutResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_GetConfigApplication">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_GetConfigApplication" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_GetConfigApplication">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_GetConfigApplicationResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_IsAlive">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_IsAlive" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_IsAlive">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_IsAliveResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_UpdateAcquireApplication">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_UpdateAcquireApplication" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_UpdateAcquireApplication">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_UpdateAcquireApplicationResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_PublishWS">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_PublishWS" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_PublishWS">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_PublishWSResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="EBIBrokerServerException">
+        <soap:fault name="EBIBrokerServerException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_PublishEx">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_PublishEx" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_PublishEx">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_PublishExResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_PostFileEx">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_PostFileEx" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_PostFileEx">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_PostFileExResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_Publish">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_Publish" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_Publish">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_PublishResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_NotifiedPublication">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_NotifiedPublication" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_NotifiedPublication">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_NotifiedPublicationResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_NotifiedPublicationWS">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_NotifiedPublicationWS" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_NotifiedPublicationWS">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_NotifiedPublicationWSResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="EBIBrokerServerException">
+        <soap:fault name="EBIBrokerServerException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_FileFound">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_FileFound" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_FileFound">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_FileFoundResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_SchemaA">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_SchemaA" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_SchemaA">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_SchemaAResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_RemoteAdpterSQLResult">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_RemoteAdpterSQLResult" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_RemoteAdpterSQLResult">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_RemoteAdpterSQLResultResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_Acquire">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_Acquire" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_Acquire">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_AcquireResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_UsersList">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_UsersList" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_UsersList">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_UsersListResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_TransformationEx">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_TransformationEx" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_TransformationEx">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_TransformationExResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_SubscriptionWS">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_SubscriptionWS" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_SubscriptionWS">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_SubscriptionWSResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="EBIBrokerServerException">
+        <soap:fault name="EBIBrokerServerException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_GetMessage">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_GetMessage" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_GetMessage">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_GetMessageResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ExecuteScript">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_ExecuteScript" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_ExecuteScript">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_ExecuteScriptResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ConfirmSubscription">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_ConfirmSubscription" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_ConfirmSubscription">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_ConfirmSubscriptionResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_EBIBrokerProfile">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_EBIBrokerProfile" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_EBIBrokerProfile">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_EBIBrokerProfileResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_DocumentDeleteOld">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_DocumentDeleteOld" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_DocumentDeleteOld">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_DocumentDeleteOldResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_RejectSubscription">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_RejectSubscription" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_RejectSubscription">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_RejectSubscriptionResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_Subscription">
+      <soap:operation soapAction="urn:UEBIBrokerInterface#TEBIBrokerInterface_Subscription" style="rpc"/>
+      <wsdl:input name="TEBIBrokerInterface_Subscription">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="TEBIBrokerInterface_SubscriptionResponse">
+        <soap:body namespace="UEBIBrokerInterface" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EBIBrokerWebServiceImplService">
+    <wsdl:port binding="tns:EBIBrokerWebServiceImplServiceSoapBinding" name="EBIBrokerWebServiceImplPort">
+      <soap:address location="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

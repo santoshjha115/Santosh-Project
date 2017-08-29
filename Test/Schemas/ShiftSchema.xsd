@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="breakfast_menu">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="food" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="food">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Part.ReferencePart.Value"/>
+				<xs:element ref="Part.Site.Value"/>
+				<xs:element ref="Type.Value"/>
+				<xs:element ref="Quantity"/>
+				<xs:element ref="Date"/>
+				<xs:element ref="Location.Id"/>
+				<xs:element ref="Location.Warehouse.Id"/>
+				<xs:element ref="ExpiryDate"/>
+				<xs:element ref="U_Inventory_Status"/>
+				<xs:element ref="U_Lot_Number"/>
+				<xs:element ref="U_GMIDPart"/>
+				<xs:element ref="U_GMIDSCDesc"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Part.ReferencePart.Value" type="xs:string"/>
+	<xs:element name="Part.Site.Value" type="xs:string"/>
+	<xs:element name="Type.Value" type="xs:string"/>
+	<xs:element name="Quantity" type="xs:string"/>
+	<xs:element name="Date" type="xs:string"/>
+	<xs:element name="Location.Id" type="xs:string"/>
+	<xs:element name="Location.Warehouse.Id" type="xs:string"/>
+	<xs:element name="ExpiryDate" type="xs:string"/>
+	<xs:element name="U_Inventory_Status" type="xs:string"/>
+	<xs:element name="U_Lot_Number" type="xs:string"/>
+	<xs:element name="U_GMIDPart" type="xs:string"/>
+	<xs:element name="U_GMIDSCDesc" type="xs:string"/>
+</xs:schema>

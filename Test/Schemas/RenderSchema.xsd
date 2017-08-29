@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/RenderSchema" xmlns:tns="http://www.example.org/RenderSchema" elementFormDefault="qualified">
+
+    <element name="breakfast_menu" type="tns:food"></element>
+
+    <complexType name="food">
+    	<sequence>
+    		<element name="Part.ReferencePart.Value" type="string"
+    			minOccurs="0" maxOccurs="1">
+    		</element>
+    		<element name="Part.Site.Value" type="string" minOccurs="0"
+    			maxOccurs="1">
+    		</element>
+    		<element name="Type.Value" type="string" minOccurs="0"
+    			maxOccurs="1">
+    		</element>
+    		<element name="Quantity" type="string" minOccurs="0"
+    			maxOccurs="1">
+    		</element>
+    		<element name="Date" type="string" minOccurs="0"
+    			maxOccurs="1">
+    		</element>
+    		<element name="Location.Id" type="string" minOccurs="0"
+    			maxOccurs="1">
+    		</element>
+    		<element name="Location.Warehouse.Id" type="string"
+    			minOccurs="0" maxOccurs="1">
+    		</element>
+    		<element name="ExpiryDate" type="string" minOccurs="0"
+    			maxOccurs="1">
+    		</element>
+    		<element name="U_Inventory_Status" type="string"
+    			minOccurs="0" maxOccurs="1">
+    		</element>
+    		<element name="U_Lot_Number" type="string" minOccurs="0"
+    			maxOccurs="1">
+    		</element>
+    		<element name="U_GMIDPart" type="string" minOccurs="0"
+    			maxOccurs="1">
+    		</element>
+    		<element name="U_GMIDSCDesc" type="string" minOccurs="0" maxOccurs="1"></element>
+    	</sequence>
+    </complexType>
+</schema>

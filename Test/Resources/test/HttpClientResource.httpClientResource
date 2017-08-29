@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:http="http://xsd.tns.tibco.com/bw/models/sharedresource/httpclient" xmlns:httpproxy="http://xsd.tns.tibco.com/bw/models/sharedresource/httpproxy" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_hlk84YNaEeedmrvYU3uCfw" name="test.HttpClientResource" type="http:HttpClientConfiguration">
+  <jndi:reference xmi:id="_rT_i8INaEeedmrvYU3uCfw" key="proxyConfigurationName" type="httpproxy:ProxyConfiguration" value="test.ProxyConfigurationResource"/>
+  <jndi:configuration xsi:type="http:HttpClientConfiguration" xmi:id="_hl330INaEeedmrvYU3uCfw" httpClientVersion="commons" retryCount="3" idleConnectionTimeout="3000">
+    <tcpDetails xmi:id="_hmBo0INaEeedmrvYU3uCfw" host="asp32.sedeb2b.com" port="9020"/>
+  </jndi:configuration>
+</jndi:namedResource>

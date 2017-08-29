@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:ns="http://impl.webservice.services.broker.edicom.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tibex="http://www.tibco.com/bs3.2/extensions" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="UEBIBrokerInterfacePortType" targetNamespace="http://impl.webservice.services.broker.edicom.com/" tibex:Concrete="true" tibex:XPDL="" xmlns:wsdl1="UEBIBrokerInterface">
+    <wsdl:import namespace="UEBIBrokerInterface" location="../Service%20Descriptors/EBIBroker.wsdl"></wsdl:import>
+    <wsdl:binding name="UEBIBrokerInterfaceSoapBinding" type="wsdl1:UEBIBrokerInterfacePortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="TEBIBrokerInterface_MessageID">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_MessageID"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_RejectedPublicationsWS">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_RejectedPublicationsWS"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_MessageList">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_MessageList"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ConfirmSubscriptionWS">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_ConfirmSubscriptionWS"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_TransformationExA">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_TransformationExA"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_MessageInfo">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_MessageInfo"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_RemoteAdpterSQLA">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_RemoteAdpterSQLA"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ExecuteSQL">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_ExecuteSQL"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_RegisterSession">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_RegisterSession"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_GetProcessesWS">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_GetProcessesWS"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ReleaseApplication">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_ReleaseApplication"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_SchemaFiles">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_SchemaFiles"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ChangeDocumentProperty">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_ChangeDocumentProperty"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_GetScript">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_GetScript"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_DoIsAlive">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_DoIsAlive"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_NotifiedRejectedPublicationWS">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_NotifiedRejectedPublicationWS"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_MessageTrace">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_MessageTrace"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_GetLastJobWS">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_GetLastJobWS"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_TransformationSchemas">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_TransformationSchemas"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_CommitTrans">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_CommitTrans"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_GetMessageA">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_GetMessageA"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ExecuteScriptWS">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_ExecuteScriptWS"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ConfirmedPublicationsWS">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_ConfirmedPublicationsWS"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_Transformation">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_Transformation"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_RegisterSessionU">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_RegisterSessionU"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_IsConfirmedSubscription">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_IsConfirmedSubscription"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_GetConnectBdParams">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_GetConnectBdParams"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_SubscriptionsList">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_SubscriptionsList"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_GetRepositoryItem">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_GetRepositoryItem"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_UpdateTimeStamp">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_UpdateTimeStamp"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_Release">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_Release"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_GetTransformationA">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_GetTransformationA"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_DBType">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_DBType"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_RollbackTrans">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_RollbackTrans"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_DocumentDelete">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_DocumentDelete"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_CheckAdapterConfigVersion">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_CheckAdapterConfigVersion"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ExecuteSQLA">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_ExecuteSQLA"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ExecuteProcessWS">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_ExecuteProcessWS"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_RemoteAdpterSQL">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_RemoteAdpterSQL"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_SendLog">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_SendLog"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ProcessExecuted">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_ProcessExecuted"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_EndSession">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_EndSession"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_RegisterSocketSession">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_RegisterSocketSession"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ProcessShouldExecuted">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_ProcessShouldExecuted"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_EBIBrokerStatusEx">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_EBIBrokerStatusEx"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_CheckAdapterVersionA">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_CheckAdapterVersionA"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_EBIObjects">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_EBIObjects"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_CheckAdapterConfigVersionA">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_CheckAdapterConfigVersionA"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_Schema">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_Schema"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_SubscriptionA">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_SubscriptionA"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_GetTransformation">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_GetTransformation"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ChangeDocumentState">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_ChangeDocumentState"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_PublishDestination">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_PublishDestination"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_PostFile">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_PostFile"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_NotifiedRejectedPublication">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_NotifiedRejectedPublication"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_EBIBrokerStatus">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_EBIBrokerStatus"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ExecuteTemplate">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_ExecuteTemplate"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ActiveProcess">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_ActiveProcess"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_SubsAndTransforA">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_SubsAndTransforA"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_SubscriptionsPending">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_SubscriptionsPending"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_MessageReference">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_MessageReference"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ConfirmedPublications">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_ConfirmedPublications"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_EBIBrokerVersion">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_EBIBrokerVersion"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ApplicationList">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_ApplicationList"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ConfirmSubscriptionEx">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_ConfirmSubscriptionEx"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_IsConfirmedPublication">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_IsConfirmedPublication"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_DocumentList">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_DocumentList"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_RemoteSQL">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_RemoteSQL"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_AcquireApplication">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_AcquireApplication"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_GetFile">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_GetFile"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_BeginTrans">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_BeginTrans"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_FileFoundEx">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_FileFoundEx"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_CheckAdapterVersion">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_CheckAdapterVersion"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_RejectSubscriptionWS">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_RejectSubscriptionWS"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_RejectedPublications">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_RejectedPublications"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_SubscriptionSource">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_SubscriptionSource"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_SubsAndTransfor">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_SubsAndTransfor"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_UpdateTimeStampTimeOut">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_UpdateTimeStampTimeOut"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_GetConfigApplication">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_GetConfigApplication"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_IsAlive">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_IsAlive"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_UpdateAcquireApplication">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_UpdateAcquireApplication"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_PublishWS">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_PublishWS"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_PublishEx">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_PublishEx"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_PostFileEx">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_PostFileEx"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_Publish">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_Publish"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_NotifiedPublication">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_NotifiedPublication"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_NotifiedPublicationWS">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_NotifiedPublicationWS"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_SchemaA">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_SchemaA"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_FileFound">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_FileFound"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_RemoteAdpterSQLResult">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_RemoteAdpterSQLResult"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_UsersList">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_UsersList"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_Acquire">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_Acquire"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_TransformationEx">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_TransformationEx"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_SubscriptionWS">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_SubscriptionWS"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_GetMessage">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_GetMessage"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ExecuteScript">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_ExecuteScript"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_ConfirmSubscription">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_ConfirmSubscription"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_EBIBrokerProfile">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_EBIBrokerProfile"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_DocumentDeleteOld">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_DocumentDeleteOld"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_RejectSubscription">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_RejectSubscription"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TEBIBrokerInterface_Subscription">
+      <soap:operation soapAction="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS/UEBIBrokerInterfacePortType/TEBIBrokerInterface_Subscription"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UEBIBrokerInterface">
+    <wsdl:port binding="ns:UEBIBrokerInterfaceSoapBinding" name="UEBIBrokerInterfaceSoap">
+      <soap:address location="https://asp32.sedeb2b.com:9020/ebiBroker00/services/EBIBrokerWS"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

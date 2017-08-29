@@ -1,0 +1,1454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="UEBIBrokerInterface" name="UEBIBrokerInterfacePortType" xmlns:ns1="UEBIBrokerInterface" xmlns:ns2="http://jaxb.dev.java.net/array" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<wsdl:types>
+<xs:schema targetNamespace="http://jaxb.dev.java.net/array" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:complexType name="stringArray" final="#all">
+<xs:sequence>
+<xs:element name="item" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
+<xs:schema targetNamespace="UEBIBrokerInterface" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" attributeFormDefault="unqualified" xmlns:tns="UEBIBrokerInterface">
+<xs:complexType name="ebiProcessWS">
+<xs:sequence>
+<xs:element name="adapter" type="xs:string" minOccurs="0"/>
+<xs:element name="application" type="xs:string" minOccurs="0"/>
+<xs:element name="description" type="xs:string" minOccurs="0"/>
+<xs:element name="domain" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="lastExecution" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="planningName" type="xs:string" minOccurs="0"/>
+<xs:element name="scriptName" type="xs:string" minOccurs="0"/>
+<xs:element name="state" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="ebiJobsWS">
+<xs:sequence>
+<xs:element name="adapter" type="xs:string" minOccurs="0"/>
+<xs:element name="application" type="xs:string" minOccurs="0"/>
+<xs:element name="data" type="xs:string" minOccurs="0"/>
+<xs:element name="description" type="xs:string" minOccurs="0"/>
+<xs:element name="domain" type="xs:string" minOccurs="0"/>
+<xs:element name="end" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="id" type="xs:string" minOccurs="0"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="notified" type="xs:int" minOccurs="0"/>
+<xs:element name="planningName" type="xs:string" minOccurs="0"/>
+<xs:element name="script" type="xs:string" minOccurs="0"/>
+<xs:element name="start" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="termination" type="xs:int" minOccurs="0"/>
+<xs:element name="type" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="ebiProcessWSArray" final="#all">
+<xs:sequence>
+<xs:element name="item" type="tns:ebiProcessWS" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="EBIBrokerServerException" type="tns:EBIBrokerServerException"/>
+<xs:complexType name="EBIBrokerServerException">
+<xs:sequence>
+<xs:element name="number" type="xs:int" nillable="true"/>
+<xs:element name="message" type="xs:string" nillable="true"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
+</wsdl:types>
+<wsdl:message name="TEBIBrokerInterface_CheckAdapterConfigVersionAResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_GetLastJobWS">
+<wsdl:part name="aClientId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aUser" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aPassword" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aPlanningName" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aName" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ApplicationListResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ConfirmedPublicationsResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ConfirmSubscription">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMessageID" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ReleaseApplication">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_IsConfirmedPublicationResponse">
+<wsdl:part name="return" type="xsd:boolean"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_GetTransformationA">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aTransformation" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aType" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_CommitTrans">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aIdTransaction" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_FileFoundEx">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aFile" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aProccesId" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_RejectedPublicationsWS">
+<wsdl:part name="aClientId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aUser" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aPassword" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_PublishDestinationResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_CheckAdapterVersionAResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ChangeDocumentProperty">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMessageID" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aProperty" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aNewValue" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aIDTransaction" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ExecuteTemplateResponse">
+<wsdl:part name="return" type="xsd:boolean"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_NotifiedPublicationResponse">
+<wsdl:part name="return" type="xsd:boolean"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ExecuteProcessWS">
+<wsdl:part name="aClientId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aUser" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aPassword" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aPlanningName" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aName" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_UsersListResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ExecuteScriptResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aProcessId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aScriptLanguage" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_EBIBrokerVersionResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_NotifiedRejectedPublicationWS">
+<wsdl:part name="aClientId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aUser" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aPassword" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMessageIds" type="ns2:stringArray"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_EBIBrokerStatusExResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ProcessShouldExecutedResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_FileFoundExResponse">
+<wsdl:part name="return" type="xsd:boolean"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_RejectedPublicationsResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_GetConnectBdParams">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_CommitTransResponse">
+<wsdl:part name="return" type="xsd:boolean"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_SendLogResponse">
+<wsdl:part name="return" type="xsd:boolean"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_CheckAdapterConfigVersionResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_EndSessionResponse"> </wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_DocumentListResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_SchemaAResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_SubsAndTransfor">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aSchema" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aTransformation" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aFilter" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aGenerateLog" type="xsd:boolean"> </wsdl:part>
+<wsdl:part name="aMaxSubscriptions" type="xsd:int"> </wsdl:part>
+<wsdl:part name="aMapIniFile" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aEBIMapFormat" type="xsd:boolean"> </wsdl:part>
+<wsdl:part name="aIDTransaction" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aReference" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aKeepFileName" type="xsd:boolean"> </wsdl:part>
+<wsdl:part name="aProfile" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_RejectSubscriptionWS">
+<wsdl:part name="aClientId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aUser" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aPassword" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMessageID" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aInfo" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_IsConfirmedSubscriptionResponse">
+<wsdl:part name="return" type="xsd:boolean"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_SchemaFiles">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aSchema" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_SubscriptionWS">
+<wsdl:part name="aClientId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aUser" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aPassword" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aSchema" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aTransformation" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aReference" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMessage" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMessageFormat" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_TransformationEx">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aTransformation" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDirIn" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aFilter" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aGenerateLog" type="xsd:boolean"> </wsdl:part>
+<wsdl:part name="aAppTransSource" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMapIniFile" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aEBIMapFormat" type="xsd:boolean"> </wsdl:part>
+<wsdl:part name="aProfile" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ActiveProcess">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aProcessId" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_SubscriptionSource">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aSchema" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMessageID" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_DBTypeResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_EBIBrokerStatusResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_RemoteAdpterSQLResult">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aProcessId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aSqlResult" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_UpdateAcquireApplication">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aTimeOut" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_RejectedPublicationsWSResponse">
+<wsdl:part name="return" type="ns2:stringArray"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_RejectSubscription">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMessageID" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aInfo" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_UpdateTimeStampResponse">
+<wsdl:part name="return" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_SubscriptionsPending">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMessageID" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_RejectSubscriptionResponse">
+<wsdl:part name="return" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_MessageListResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_AcquireApplicationResponse">
+<wsdl:part name="return" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_Publish">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMessage" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aSchema" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDestination" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ReleaseResponse">
+<wsdl:part name="return" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_GetFileResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_SubscriptionSourceResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_UpdateAcquireApplicationResponse">
+<wsdl:part name="return" type="xsd:boolean"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_EBIBrokerVersion"> </wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_NotifiedRejectedPublicationWSResponse">
+<wsdl:part name="return" type="xsd:boolean"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_Release">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aId" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="EBIBrokerServerException">
+<wsdl:part name="EBIBrokerServerException" element="ns1:EBIBrokerServerException"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ProcessExecuted">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aScriptId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aScriptStatus" type="xsd:int"> </wsdl:part>
+<wsdl:part name="aScriptDescription" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aScriptLog" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_SchemaFilesResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_CheckAdapterVersionResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_UpdateTimeStampTimeOut">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aTimeOut" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_CheckAdapterConfigVersion">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aAdatperType" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aAdatperName" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aHash" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_MessageTraceResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_RegisterSessionU">
+<wsdl:part name="aClient" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aUser" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aPassword" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aData" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ExecuteSQLA">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aSql" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aParameters" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aSerializeFormat" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ConfirmSubscriptionEx">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMessageID" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_UpdateTimeStampTimeOutResponse">
+<wsdl:part name="return" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_SubsAndTransforResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ExecuteScript">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aScriptName" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aProcessId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aScriptLanguage" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_GetScriptResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_IsAliveResponse">
+<wsdl:part name="return" type="xsd:boolean"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_FileFoundResponse">
+<wsdl:part name="return" type="xsd:boolean"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_PostFile">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aFileName" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aData" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aSequence" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ConfirmSubscriptionWS">
+<wsdl:part name="aClientId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aUser" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aPassword" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMessageID" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_DoIsAliveResponse">
+<wsdl:part name="return" type="xsd:boolean"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_PublishResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_EBIObjectsResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_AcquireApplication">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aTimeOut" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_GetConfigApplicationResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_TransformationSchemasResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aSourceSchema" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDestinationSchema" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ConfirmedPublicationsWSResponse">
+<wsdl:part name="return" type="ns2:stringArray"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_EBIBrokerProfile"> </wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_RegisterSocketSessionResponse">
+<wsdl:part name="return" type="xsd:boolean"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_RemoteAdpterSQL">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aAdpterName" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aConnectString" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aUser" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aPasswordE" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aSql" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_GetScript">
+<wsdl:part name="aSeesionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aScriptId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_MessageList">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_EndSession">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_PostFileEx">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aFileName" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aData" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aSequence" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDirectoryName" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_GetFile">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aFileName" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aSequence" type="xsd:int"> </wsdl:part>
+<wsdl:part name="aNumBytes" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_DocumentDeleteResponse">
+<wsdl:part name="return" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_SubscriptionsList">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aSchema" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMaxSubscriptions" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_GetTransformationAResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_RegisterSocketSession">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aConnectionId" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ExecuteSQLAResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_RejectedPublications">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_DocumentDeleteOldResponse">
+<wsdl:part name="return" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_MessageReference">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMessageID" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_CheckAdapterConfigVersionA">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aAdatperType" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aAdatperName" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aHash" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_PublishExResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_TransformationExResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_RemoteSQL">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aConnectString" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aUser" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aPasswordE" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aSql" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aSqlE" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aParameters" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_MessageInfo">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMessageID" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ConfirmSubscriptionResponse">
+<wsdl:part name="return" type="xsd:boolean"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_SendLog">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aAdapterType" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aAdapterName" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aAdapterIP" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aLogFileName" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aLogFile" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aLogType" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_RemoteSQLResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_GetLastJobWSResponse">
+<wsdl:part name="return" type="ns1:ebiJobsWS"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_SubscriptionsListResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_MessageReferenceResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_TransformationResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ExecuteScriptWSResponse">
+<wsdl:part name="return" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_SubscriptionsPendingResponse">
+<wsdl:part name="return" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_MessageTrace">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMessageID" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_RejectSubscriptionWSResponse">
+<wsdl:part name="return" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_GetMessageResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ExecuteTemplate">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aTemplateName" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aParameters" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_EBIBrokerStatus"> </wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ConfirmSubscriptionExResponse">
+<wsdl:part name="return" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_PublishDestination">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aSchema" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMessageID" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_PostFileResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_CheckAdapterVersion">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aAdatperName" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aVersion" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aPlatForm" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aLevel" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_RemoteAdpterSQLResultResponse">
+<wsdl:part name="return" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_EBIObjects"> </wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_IsConfirmedPublication">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMessageID" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_SubscriptionA">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aSchema" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMaxSubscriptions" type="xsd:int"> </wsdl:part>
+<wsdl:part name="aIDMessage" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aNoChangeState" type="xsd:boolean"> </wsdl:part>
+<wsdl:part name="aIDTransaction" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aReference" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aKeepFileName" type="xsd:boolean"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_PublishEx">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMessage" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aSchema" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDestination" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aReference" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDuplicates" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_GetMessageAResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_SubscriptionWSResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMessage" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMessageFormat" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_RollbackTrans">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aIdTransaction" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aKeepTransaction" type="xsd:boolean"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_RemoteAdpterSQLAResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ExecuteSQL">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aSql" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aParameters" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aSerializeFormat" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_GetTransformationResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_NotifiedPublicationWS">
+<wsdl:part name="aClientId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aUser" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aPassword" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMessageIds" type="ns2:stringArray"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ChangeDocumentStateResponse">
+<wsdl:part name="return" type="xsd:boolean"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_GetRepositoryItemResponse">
+<wsdl:part name="return" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_NotifiedRejectedPublicationResponse">
+<wsdl:part name="return" type="xsd:boolean"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_DocumentDelete">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMessageID" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_RollbackTransResponse">
+<wsdl:part name="return" type="xsd:boolean"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_SchemaResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_SubsAndTransforAResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_TransformationExA">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aTransformation" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDirIn" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aFilter" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aGenerateLog" type="xsd:boolean"> </wsdl:part>
+<wsdl:part name="aAppTransSource" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMapIniFile" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aEBIMapFormat" type="xsd:boolean"> </wsdl:part>
+<wsdl:part name="aProfile" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_SubscriptionAResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ExecuteScriptWS">
+<wsdl:part name="aClientId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aUser" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aPassword" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aScriptName" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_RegisterSession">
+<wsdl:part name="aClient" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aUser" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aPassword" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aData" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_CheckAdapterVersionA">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aAdatperName" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aVersion" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aPlatForm" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aLevel" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_GetMessageA">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMessageID" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMessageType" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_Transformation">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aTransformation" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDirIn" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aFilter" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aGenerateLog" type="xsd:boolean"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ReleaseApplicationResponse">
+<wsdl:part name="return" type="xsd:boolean"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_Subscription">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aSchema" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMaxSubscriptions" type="xsd:int"> </wsdl:part>
+<wsdl:part name="aIDMessage" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aNoChangeState" type="xsd:boolean"> </wsdl:part>
+<wsdl:part name="aIDTransaction" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aReference" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aKeepFileName" type="xsd:boolean"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_TransformationSchemas">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aTransformation" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aSourceSchema" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDestinationSchema" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ActiveProcessResponse">
+<wsdl:part name="return" type="xsd:boolean"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_NotifiedRejectedPublication">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMessageID" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_PublishWSResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_EBIBrokerStatusEx">
+<wsdl:part name="dataSource" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ConfirmedPublicationsWS">
+<wsdl:part name="aClientId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aUser" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aPassword" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_BeginTransResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ProcessExecutedResponse">
+<wsdl:part name="return" type="xsd:boolean"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ExecuteSQLResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_UsersList">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aEnabled" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_GetProcessesWSResponse">
+<wsdl:part name="return" type="ns1:ebiProcessWSArray"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_SubsAndTransforA">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aSchema" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aTransformation" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aFilter" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aGenerateLog" type="xsd:boolean"> </wsdl:part>
+<wsdl:part name="aMaxSubscriptions" type="xsd:int"> </wsdl:part>
+<wsdl:part name="aMapIniFile" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aEBIMapFormat" type="xsd:boolean"> </wsdl:part>
+<wsdl:part name="aIDTransaction" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aReference" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aKeepFileName" type="xsd:boolean"> </wsdl:part>
+<wsdl:part name="aProfile" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_NotifiedPublicationWSResponse">
+<wsdl:part name="return" type="xsd:boolean"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_GetConnectBdParamsResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_GetTransformation">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aTransformation" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aType" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_GetMessage">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMessageID" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMessageType" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_RemoteAdpterSQLA">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aAdpterName" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aConnectString" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aUser" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aPasswordE" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aSql" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_IsConfirmedSubscription">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMessageID" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_PublishWS">
+<wsdl:part name="aClientId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aUser" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aPassword" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aSchema" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDestination" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aReference" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMessage" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMessageFormat" type="xsd:int"> </wsdl:part>
+<wsdl:part name="aDuplicates" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_NotifiedPublication">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMessageID" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_RegisterSessionResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_DocumentList">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aSchema" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aIDMessage" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aReference" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aType" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ChangeDocumentPropertyResponse">
+<wsdl:part name="return" type="xsd:boolean"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_MessageInfoResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_UpdateTimeStamp">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aId" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_Schema">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aSchema" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_DoIsAlive">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_BeginTrans">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aTimeoutSec" type="xsd:int"> </wsdl:part>
+<wsdl:part name="aDescription" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_EBIBrokerProfileResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_RemoteAdpterSQLResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_TransformationExAResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ChangeDocumentState">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMessageID" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aState" type="xsd:int"> </wsdl:part>
+<wsdl:part name="aIDTransaction" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_GetConfigApplication">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aQualifier" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_AcquireResponse">
+<wsdl:part name="return" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_Acquire">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDescription" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aTimeOut" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_GetProcessesWS">
+<wsdl:part name="aClientId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aUser" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aPassword" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplicationList" type="ns2:stringArray"> </wsdl:part>
+<wsdl:part name="aPlanningName" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aName" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_SubscriptionResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_SchemaA">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aSchema" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ExecuteProcessWSResponse">
+<wsdl:part name="return" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_RegisterSessionUResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_PostFileExResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ConfirmedPublications">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aExtendedInfo" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_MessageIDResponse">
+<wsdl:part name="return" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ApplicationList">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aQualifier" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aValue1" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_DocumentDeleteOld">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aSchema" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aMinuteOld" type="xsd:int"> </wsdl:part>
+<wsdl:part name="aOnlyFinnalState" type="xsd:boolean"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_GetRepositoryItem">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aName" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aType" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_MessageID">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aDomain" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplication" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aReference" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aApplicationSource" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_FileFound">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+<wsdl:part name="aFile" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ConfirmSubscriptionWSResponse">
+<wsdl:part name="return" type="xsd:int"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_ProcessShouldExecuted">
+<wsdl:part name="aSessionId" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_DBType">
+<wsdl:part name="SessionId" type="xsd:string"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="TEBIBrokerInterface_IsAlive"> </wsdl:message>
+<wsdl:portType name="UEBIBrokerInterfacePortType">
+<wsdl:operation name="TEBIBrokerInterface_MessageID">
+<wsdl:input name="TEBIBrokerInterface_MessageID" message="ns1:TEBIBrokerInterface_MessageID"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_MessageIDResponse" message="ns1:TEBIBrokerInterface_MessageIDResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_RejectedPublicationsWS">
+<wsdl:input name="TEBIBrokerInterface_RejectedPublicationsWS" message="ns1:TEBIBrokerInterface_RejectedPublicationsWS"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_RejectedPublicationsWSResponse" message="ns1:TEBIBrokerInterface_RejectedPublicationsWSResponse"> </wsdl:output>
+<wsdl:fault name="EBIBrokerServerException" message="ns1:EBIBrokerServerException"> </wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_MessageList">
+<wsdl:input name="TEBIBrokerInterface_MessageList" message="ns1:TEBIBrokerInterface_MessageList"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_MessageListResponse" message="ns1:TEBIBrokerInterface_MessageListResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_ConfirmSubscriptionWS">
+<wsdl:input name="TEBIBrokerInterface_ConfirmSubscriptionWS" message="ns1:TEBIBrokerInterface_ConfirmSubscriptionWS"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_ConfirmSubscriptionWSResponse" message="ns1:TEBIBrokerInterface_ConfirmSubscriptionWSResponse"> </wsdl:output>
+<wsdl:fault name="EBIBrokerServerException" message="ns1:EBIBrokerServerException"> </wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_TransformationExA">
+<wsdl:input name="TEBIBrokerInterface_TransformationExA" message="ns1:TEBIBrokerInterface_TransformationExA"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_TransformationExAResponse" message="ns1:TEBIBrokerInterface_TransformationExAResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_MessageInfo">
+<wsdl:input name="TEBIBrokerInterface_MessageInfo" message="ns1:TEBIBrokerInterface_MessageInfo"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_MessageInfoResponse" message="ns1:TEBIBrokerInterface_MessageInfoResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_RemoteAdpterSQLA">
+<wsdl:input name="TEBIBrokerInterface_RemoteAdpterSQLA" message="ns1:TEBIBrokerInterface_RemoteAdpterSQLA"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_RemoteAdpterSQLAResponse" message="ns1:TEBIBrokerInterface_RemoteAdpterSQLAResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_ExecuteSQL">
+<wsdl:input name="TEBIBrokerInterface_ExecuteSQL" message="ns1:TEBIBrokerInterface_ExecuteSQL"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_ExecuteSQLResponse" message="ns1:TEBIBrokerInterface_ExecuteSQLResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_RegisterSession">
+<wsdl:input name="TEBIBrokerInterface_RegisterSession" message="ns1:TEBIBrokerInterface_RegisterSession"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_RegisterSessionResponse" message="ns1:TEBIBrokerInterface_RegisterSessionResponse"> </wsdl:output>
+<wsdl:fault name="EBIBrokerServerException" message="ns1:EBIBrokerServerException"> </wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_GetProcessesWS">
+<wsdl:input name="TEBIBrokerInterface_GetProcessesWS" message="ns1:TEBIBrokerInterface_GetProcessesWS"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_GetProcessesWSResponse" message="ns1:TEBIBrokerInterface_GetProcessesWSResponse"> </wsdl:output>
+<wsdl:fault name="EBIBrokerServerException" message="ns1:EBIBrokerServerException"> </wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_ReleaseApplication">
+<wsdl:input name="TEBIBrokerInterface_ReleaseApplication" message="ns1:TEBIBrokerInterface_ReleaseApplication"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_ReleaseApplicationResponse" message="ns1:TEBIBrokerInterface_ReleaseApplicationResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_SchemaFiles">
+<wsdl:input name="TEBIBrokerInterface_SchemaFiles" message="ns1:TEBIBrokerInterface_SchemaFiles"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_SchemaFilesResponse" message="ns1:TEBIBrokerInterface_SchemaFilesResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_ChangeDocumentProperty">
+<wsdl:input name="TEBIBrokerInterface_ChangeDocumentProperty" message="ns1:TEBIBrokerInterface_ChangeDocumentProperty"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_ChangeDocumentPropertyResponse" message="ns1:TEBIBrokerInterface_ChangeDocumentPropertyResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_GetScript">
+<wsdl:input name="TEBIBrokerInterface_GetScript" message="ns1:TEBIBrokerInterface_GetScript"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_GetScriptResponse" message="ns1:TEBIBrokerInterface_GetScriptResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_DoIsAlive">
+<wsdl:input name="TEBIBrokerInterface_DoIsAlive" message="ns1:TEBIBrokerInterface_DoIsAlive"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_DoIsAliveResponse" message="ns1:TEBIBrokerInterface_DoIsAliveResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_NotifiedRejectedPublicationWS">
+<wsdl:input name="TEBIBrokerInterface_NotifiedRejectedPublicationWS" message="ns1:TEBIBrokerInterface_NotifiedRejectedPublicationWS"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_NotifiedRejectedPublicationWSResponse" message="ns1:TEBIBrokerInterface_NotifiedRejectedPublicationWSResponse"> </wsdl:output>
+<wsdl:fault name="EBIBrokerServerException" message="ns1:EBIBrokerServerException"> </wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_MessageTrace">
+<wsdl:input name="TEBIBrokerInterface_MessageTrace" message="ns1:TEBIBrokerInterface_MessageTrace"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_MessageTraceResponse" message="ns1:TEBIBrokerInterface_MessageTraceResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_GetLastJobWS">
+<wsdl:input name="TEBIBrokerInterface_GetLastJobWS" message="ns1:TEBIBrokerInterface_GetLastJobWS"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_GetLastJobWSResponse" message="ns1:TEBIBrokerInterface_GetLastJobWSResponse"> </wsdl:output>
+<wsdl:fault name="EBIBrokerServerException" message="ns1:EBIBrokerServerException"> </wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_TransformationSchemas" parameterOrder="aSessionId aDomain aApplication aTransformation aSourceSchema aDestinationSchema">
+<wsdl:input name="TEBIBrokerInterface_TransformationSchemas" message="ns1:TEBIBrokerInterface_TransformationSchemas"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_TransformationSchemasResponse" message="ns1:TEBIBrokerInterface_TransformationSchemasResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_CommitTrans">
+<wsdl:input name="TEBIBrokerInterface_CommitTrans" message="ns1:TEBIBrokerInterface_CommitTrans"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_CommitTransResponse" message="ns1:TEBIBrokerInterface_CommitTransResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_GetMessageA">
+<wsdl:input name="TEBIBrokerInterface_GetMessageA" message="ns1:TEBIBrokerInterface_GetMessageA"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_GetMessageAResponse" message="ns1:TEBIBrokerInterface_GetMessageAResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_ExecuteScriptWS">
+<wsdl:input name="TEBIBrokerInterface_ExecuteScriptWS" message="ns1:TEBIBrokerInterface_ExecuteScriptWS"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_ExecuteScriptWSResponse" message="ns1:TEBIBrokerInterface_ExecuteScriptWSResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_ConfirmedPublicationsWS">
+<wsdl:input name="TEBIBrokerInterface_ConfirmedPublicationsWS" message="ns1:TEBIBrokerInterface_ConfirmedPublicationsWS"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_ConfirmedPublicationsWSResponse" message="ns1:TEBIBrokerInterface_ConfirmedPublicationsWSResponse"> </wsdl:output>
+<wsdl:fault name="EBIBrokerServerException" message="ns1:EBIBrokerServerException"> </wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_Transformation">
+<wsdl:input name="TEBIBrokerInterface_Transformation" message="ns1:TEBIBrokerInterface_Transformation"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_TransformationResponse" message="ns1:TEBIBrokerInterface_TransformationResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_RegisterSessionU">
+<wsdl:input name="TEBIBrokerInterface_RegisterSessionU" message="ns1:TEBIBrokerInterface_RegisterSessionU"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_RegisterSessionUResponse" message="ns1:TEBIBrokerInterface_RegisterSessionUResponse"> </wsdl:output>
+<wsdl:fault name="EBIBrokerServerException" message="ns1:EBIBrokerServerException"> </wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_IsConfirmedSubscription">
+<wsdl:input name="TEBIBrokerInterface_IsConfirmedSubscription" message="ns1:TEBIBrokerInterface_IsConfirmedSubscription"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_IsConfirmedSubscriptionResponse" message="ns1:TEBIBrokerInterface_IsConfirmedSubscriptionResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_GetConnectBdParams">
+<wsdl:input name="TEBIBrokerInterface_GetConnectBdParams" message="ns1:TEBIBrokerInterface_GetConnectBdParams"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_GetConnectBdParamsResponse" message="ns1:TEBIBrokerInterface_GetConnectBdParamsResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_SubscriptionsList">
+<wsdl:input name="TEBIBrokerInterface_SubscriptionsList" message="ns1:TEBIBrokerInterface_SubscriptionsList"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_SubscriptionsListResponse" message="ns1:TEBIBrokerInterface_SubscriptionsListResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_GetRepositoryItem">
+<wsdl:input name="TEBIBrokerInterface_GetRepositoryItem" message="ns1:TEBIBrokerInterface_GetRepositoryItem"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_GetRepositoryItemResponse" message="ns1:TEBIBrokerInterface_GetRepositoryItemResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_UpdateTimeStamp">
+<wsdl:input name="TEBIBrokerInterface_UpdateTimeStamp" message="ns1:TEBIBrokerInterface_UpdateTimeStamp"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_UpdateTimeStampResponse" message="ns1:TEBIBrokerInterface_UpdateTimeStampResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_Release">
+<wsdl:input name="TEBIBrokerInterface_Release" message="ns1:TEBIBrokerInterface_Release"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_ReleaseResponse" message="ns1:TEBIBrokerInterface_ReleaseResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_GetTransformationA">
+<wsdl:input name="TEBIBrokerInterface_GetTransformationA" message="ns1:TEBIBrokerInterface_GetTransformationA"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_GetTransformationAResponse" message="ns1:TEBIBrokerInterface_GetTransformationAResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_DBType">
+<wsdl:input name="TEBIBrokerInterface_DBType" message="ns1:TEBIBrokerInterface_DBType"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_DBTypeResponse" message="ns1:TEBIBrokerInterface_DBTypeResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_RollbackTrans">
+<wsdl:input name="TEBIBrokerInterface_RollbackTrans" message="ns1:TEBIBrokerInterface_RollbackTrans"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_RollbackTransResponse" message="ns1:TEBIBrokerInterface_RollbackTransResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_DocumentDelete">
+<wsdl:input name="TEBIBrokerInterface_DocumentDelete" message="ns1:TEBIBrokerInterface_DocumentDelete"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_DocumentDeleteResponse" message="ns1:TEBIBrokerInterface_DocumentDeleteResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_CheckAdapterConfigVersion">
+<wsdl:input name="TEBIBrokerInterface_CheckAdapterConfigVersion" message="ns1:TEBIBrokerInterface_CheckAdapterConfigVersion"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_CheckAdapterConfigVersionResponse" message="ns1:TEBIBrokerInterface_CheckAdapterConfigVersionResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_ExecuteSQLA">
+<wsdl:input name="TEBIBrokerInterface_ExecuteSQLA" message="ns1:TEBIBrokerInterface_ExecuteSQLA"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_ExecuteSQLAResponse" message="ns1:TEBIBrokerInterface_ExecuteSQLAResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_ExecuteProcessWS">
+<wsdl:input name="TEBIBrokerInterface_ExecuteProcessWS" message="ns1:TEBIBrokerInterface_ExecuteProcessWS"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_ExecuteProcessWSResponse" message="ns1:TEBIBrokerInterface_ExecuteProcessWSResponse"> </wsdl:output>
+<wsdl:fault name="EBIBrokerServerException" message="ns1:EBIBrokerServerException"> </wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_RemoteAdpterSQL">
+<wsdl:input name="TEBIBrokerInterface_RemoteAdpterSQL" message="ns1:TEBIBrokerInterface_RemoteAdpterSQL"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_RemoteAdpterSQLResponse" message="ns1:TEBIBrokerInterface_RemoteAdpterSQLResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_SendLog">
+<wsdl:input name="TEBIBrokerInterface_SendLog" message="ns1:TEBIBrokerInterface_SendLog"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_SendLogResponse" message="ns1:TEBIBrokerInterface_SendLogResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_ProcessExecuted">
+<wsdl:input name="TEBIBrokerInterface_ProcessExecuted" message="ns1:TEBIBrokerInterface_ProcessExecuted"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_ProcessExecutedResponse" message="ns1:TEBIBrokerInterface_ProcessExecutedResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_EndSession">
+<wsdl:input name="TEBIBrokerInterface_EndSession" message="ns1:TEBIBrokerInterface_EndSession"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_EndSessionResponse" message="ns1:TEBIBrokerInterface_EndSessionResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_RegisterSocketSession">
+<wsdl:input name="TEBIBrokerInterface_RegisterSocketSession" message="ns1:TEBIBrokerInterface_RegisterSocketSession"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_RegisterSocketSessionResponse" message="ns1:TEBIBrokerInterface_RegisterSocketSessionResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_ProcessShouldExecuted">
+<wsdl:input name="TEBIBrokerInterface_ProcessShouldExecuted" message="ns1:TEBIBrokerInterface_ProcessShouldExecuted"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_ProcessShouldExecutedResponse" message="ns1:TEBIBrokerInterface_ProcessShouldExecutedResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_EBIBrokerStatusEx">
+<wsdl:input name="TEBIBrokerInterface_EBIBrokerStatusEx" message="ns1:TEBIBrokerInterface_EBIBrokerStatusEx"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_EBIBrokerStatusExResponse" message="ns1:TEBIBrokerInterface_EBIBrokerStatusExResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_CheckAdapterVersionA">
+<wsdl:input name="TEBIBrokerInterface_CheckAdapterVersionA" message="ns1:TEBIBrokerInterface_CheckAdapterVersionA"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_CheckAdapterVersionAResponse" message="ns1:TEBIBrokerInterface_CheckAdapterVersionAResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_EBIObjects">
+<wsdl:input name="TEBIBrokerInterface_EBIObjects" message="ns1:TEBIBrokerInterface_EBIObjects"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_EBIObjectsResponse" message="ns1:TEBIBrokerInterface_EBIObjectsResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_CheckAdapterConfigVersionA">
+<wsdl:input name="TEBIBrokerInterface_CheckAdapterConfigVersionA" message="ns1:TEBIBrokerInterface_CheckAdapterConfigVersionA"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_CheckAdapterConfigVersionAResponse" message="ns1:TEBIBrokerInterface_CheckAdapterConfigVersionAResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_Schema">
+<wsdl:input name="TEBIBrokerInterface_Schema" message="ns1:TEBIBrokerInterface_Schema"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_SchemaResponse" message="ns1:TEBIBrokerInterface_SchemaResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_SubscriptionA">
+<wsdl:input name="TEBIBrokerInterface_SubscriptionA" message="ns1:TEBIBrokerInterface_SubscriptionA"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_SubscriptionAResponse" message="ns1:TEBIBrokerInterface_SubscriptionAResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_GetTransformation">
+<wsdl:input name="TEBIBrokerInterface_GetTransformation" message="ns1:TEBIBrokerInterface_GetTransformation"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_GetTransformationResponse" message="ns1:TEBIBrokerInterface_GetTransformationResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_ChangeDocumentState">
+<wsdl:input name="TEBIBrokerInterface_ChangeDocumentState" message="ns1:TEBIBrokerInterface_ChangeDocumentState"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_ChangeDocumentStateResponse" message="ns1:TEBIBrokerInterface_ChangeDocumentStateResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_PublishDestination">
+<wsdl:input name="TEBIBrokerInterface_PublishDestination" message="ns1:TEBIBrokerInterface_PublishDestination"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_PublishDestinationResponse" message="ns1:TEBIBrokerInterface_PublishDestinationResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_PostFile">
+<wsdl:input name="TEBIBrokerInterface_PostFile" message="ns1:TEBIBrokerInterface_PostFile"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_PostFileResponse" message="ns1:TEBIBrokerInterface_PostFileResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_NotifiedRejectedPublication">
+<wsdl:input name="TEBIBrokerInterface_NotifiedRejectedPublication" message="ns1:TEBIBrokerInterface_NotifiedRejectedPublication"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_NotifiedRejectedPublicationResponse" message="ns1:TEBIBrokerInterface_NotifiedRejectedPublicationResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_EBIBrokerStatus">
+<wsdl:input name="TEBIBrokerInterface_EBIBrokerStatus" message="ns1:TEBIBrokerInterface_EBIBrokerStatus"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_EBIBrokerStatusResponse" message="ns1:TEBIBrokerInterface_EBIBrokerStatusResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_ExecuteTemplate">
+<wsdl:input name="TEBIBrokerInterface_ExecuteTemplate" message="ns1:TEBIBrokerInterface_ExecuteTemplate"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_ExecuteTemplateResponse" message="ns1:TEBIBrokerInterface_ExecuteTemplateResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_ActiveProcess">
+<wsdl:input name="TEBIBrokerInterface_ActiveProcess" message="ns1:TEBIBrokerInterface_ActiveProcess"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_ActiveProcessResponse" message="ns1:TEBIBrokerInterface_ActiveProcessResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_SubsAndTransforA">
+<wsdl:input name="TEBIBrokerInterface_SubsAndTransforA" message="ns1:TEBIBrokerInterface_SubsAndTransforA"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_SubsAndTransforAResponse" message="ns1:TEBIBrokerInterface_SubsAndTransforAResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_SubscriptionsPending">
+<wsdl:input name="TEBIBrokerInterface_SubscriptionsPending" message="ns1:TEBIBrokerInterface_SubscriptionsPending"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_SubscriptionsPendingResponse" message="ns1:TEBIBrokerInterface_SubscriptionsPendingResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_MessageReference">
+<wsdl:input name="TEBIBrokerInterface_MessageReference" message="ns1:TEBIBrokerInterface_MessageReference"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_MessageReferenceResponse" message="ns1:TEBIBrokerInterface_MessageReferenceResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_ConfirmedPublications">
+<wsdl:input name="TEBIBrokerInterface_ConfirmedPublications" message="ns1:TEBIBrokerInterface_ConfirmedPublications"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_ConfirmedPublicationsResponse" message="ns1:TEBIBrokerInterface_ConfirmedPublicationsResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_EBIBrokerVersion">
+<wsdl:input name="TEBIBrokerInterface_EBIBrokerVersion" message="ns1:TEBIBrokerInterface_EBIBrokerVersion"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_EBIBrokerVersionResponse" message="ns1:TEBIBrokerInterface_EBIBrokerVersionResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_ApplicationList">
+<wsdl:input name="TEBIBrokerInterface_ApplicationList" message="ns1:TEBIBrokerInterface_ApplicationList"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_ApplicationListResponse" message="ns1:TEBIBrokerInterface_ApplicationListResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_ConfirmSubscriptionEx">
+<wsdl:input name="TEBIBrokerInterface_ConfirmSubscriptionEx" message="ns1:TEBIBrokerInterface_ConfirmSubscriptionEx"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_ConfirmSubscriptionExResponse" message="ns1:TEBIBrokerInterface_ConfirmSubscriptionExResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_IsConfirmedPublication">
+<wsdl:input name="TEBIBrokerInterface_IsConfirmedPublication" message="ns1:TEBIBrokerInterface_IsConfirmedPublication"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_IsConfirmedPublicationResponse" message="ns1:TEBIBrokerInterface_IsConfirmedPublicationResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_DocumentList">
+<wsdl:input name="TEBIBrokerInterface_DocumentList" message="ns1:TEBIBrokerInterface_DocumentList"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_DocumentListResponse" message="ns1:TEBIBrokerInterface_DocumentListResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_RemoteSQL">
+<wsdl:input name="TEBIBrokerInterface_RemoteSQL" message="ns1:TEBIBrokerInterface_RemoteSQL"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_RemoteSQLResponse" message="ns1:TEBIBrokerInterface_RemoteSQLResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_AcquireApplication">
+<wsdl:input name="TEBIBrokerInterface_AcquireApplication" message="ns1:TEBIBrokerInterface_AcquireApplication"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_AcquireApplicationResponse" message="ns1:TEBIBrokerInterface_AcquireApplicationResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_GetFile">
+<wsdl:input name="TEBIBrokerInterface_GetFile" message="ns1:TEBIBrokerInterface_GetFile"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_GetFileResponse" message="ns1:TEBIBrokerInterface_GetFileResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_BeginTrans">
+<wsdl:input name="TEBIBrokerInterface_BeginTrans" message="ns1:TEBIBrokerInterface_BeginTrans"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_BeginTransResponse" message="ns1:TEBIBrokerInterface_BeginTransResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_FileFoundEx">
+<wsdl:input name="TEBIBrokerInterface_FileFoundEx" message="ns1:TEBIBrokerInterface_FileFoundEx"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_FileFoundExResponse" message="ns1:TEBIBrokerInterface_FileFoundExResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_CheckAdapterVersion">
+<wsdl:input name="TEBIBrokerInterface_CheckAdapterVersion" message="ns1:TEBIBrokerInterface_CheckAdapterVersion"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_CheckAdapterVersionResponse" message="ns1:TEBIBrokerInterface_CheckAdapterVersionResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_RejectSubscriptionWS">
+<wsdl:input name="TEBIBrokerInterface_RejectSubscriptionWS" message="ns1:TEBIBrokerInterface_RejectSubscriptionWS"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_RejectSubscriptionWSResponse" message="ns1:TEBIBrokerInterface_RejectSubscriptionWSResponse"> </wsdl:output>
+<wsdl:fault name="EBIBrokerServerException" message="ns1:EBIBrokerServerException"> </wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_RejectedPublications">
+<wsdl:input name="TEBIBrokerInterface_RejectedPublications" message="ns1:TEBIBrokerInterface_RejectedPublications"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_RejectedPublicationsResponse" message="ns1:TEBIBrokerInterface_RejectedPublicationsResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_SubscriptionSource">
+<wsdl:input name="TEBIBrokerInterface_SubscriptionSource" message="ns1:TEBIBrokerInterface_SubscriptionSource"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_SubscriptionSourceResponse" message="ns1:TEBIBrokerInterface_SubscriptionSourceResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_SubsAndTransfor">
+<wsdl:input name="TEBIBrokerInterface_SubsAndTransfor" message="ns1:TEBIBrokerInterface_SubsAndTransfor"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_SubsAndTransforResponse" message="ns1:TEBIBrokerInterface_SubsAndTransforResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_UpdateTimeStampTimeOut">
+<wsdl:input name="TEBIBrokerInterface_UpdateTimeStampTimeOut" message="ns1:TEBIBrokerInterface_UpdateTimeStampTimeOut"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_UpdateTimeStampTimeOutResponse" message="ns1:TEBIBrokerInterface_UpdateTimeStampTimeOutResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_GetConfigApplication">
+<wsdl:input name="TEBIBrokerInterface_GetConfigApplication" message="ns1:TEBIBrokerInterface_GetConfigApplication"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_GetConfigApplicationResponse" message="ns1:TEBIBrokerInterface_GetConfigApplicationResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_IsAlive">
+<wsdl:input name="TEBIBrokerInterface_IsAlive" message="ns1:TEBIBrokerInterface_IsAlive"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_IsAliveResponse" message="ns1:TEBIBrokerInterface_IsAliveResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_UpdateAcquireApplication">
+<wsdl:input name="TEBIBrokerInterface_UpdateAcquireApplication" message="ns1:TEBIBrokerInterface_UpdateAcquireApplication"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_UpdateAcquireApplicationResponse" message="ns1:TEBIBrokerInterface_UpdateAcquireApplicationResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_PublishWS">
+<wsdl:input name="TEBIBrokerInterface_PublishWS" message="ns1:TEBIBrokerInterface_PublishWS"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_PublishWSResponse" message="ns1:TEBIBrokerInterface_PublishWSResponse"> </wsdl:output>
+<wsdl:fault name="EBIBrokerServerException" message="ns1:EBIBrokerServerException"> </wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_PublishEx">
+<wsdl:input name="TEBIBrokerInterface_PublishEx" message="ns1:TEBIBrokerInterface_PublishEx"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_PublishExResponse" message="ns1:TEBIBrokerInterface_PublishExResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_PostFileEx">
+<wsdl:input name="TEBIBrokerInterface_PostFileEx" message="ns1:TEBIBrokerInterface_PostFileEx"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_PostFileExResponse" message="ns1:TEBIBrokerInterface_PostFileExResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_Publish">
+<wsdl:input name="TEBIBrokerInterface_Publish" message="ns1:TEBIBrokerInterface_Publish"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_PublishResponse" message="ns1:TEBIBrokerInterface_PublishResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_NotifiedPublication">
+<wsdl:input name="TEBIBrokerInterface_NotifiedPublication" message="ns1:TEBIBrokerInterface_NotifiedPublication"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_NotifiedPublicationResponse" message="ns1:TEBIBrokerInterface_NotifiedPublicationResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_NotifiedPublicationWS">
+<wsdl:input name="TEBIBrokerInterface_NotifiedPublicationWS" message="ns1:TEBIBrokerInterface_NotifiedPublicationWS"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_NotifiedPublicationWSResponse" message="ns1:TEBIBrokerInterface_NotifiedPublicationWSResponse"> </wsdl:output>
+<wsdl:fault name="EBIBrokerServerException" message="ns1:EBIBrokerServerException"> </wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_SchemaA">
+<wsdl:input name="TEBIBrokerInterface_SchemaA" message="ns1:TEBIBrokerInterface_SchemaA"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_SchemaAResponse" message="ns1:TEBIBrokerInterface_SchemaAResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_FileFound">
+<wsdl:input name="TEBIBrokerInterface_FileFound" message="ns1:TEBIBrokerInterface_FileFound"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_FileFoundResponse" message="ns1:TEBIBrokerInterface_FileFoundResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_RemoteAdpterSQLResult">
+<wsdl:input name="TEBIBrokerInterface_RemoteAdpterSQLResult" message="ns1:TEBIBrokerInterface_RemoteAdpterSQLResult"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_RemoteAdpterSQLResultResponse" message="ns1:TEBIBrokerInterface_RemoteAdpterSQLResultResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_UsersList">
+<wsdl:input name="TEBIBrokerInterface_UsersList" message="ns1:TEBIBrokerInterface_UsersList"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_UsersListResponse" message="ns1:TEBIBrokerInterface_UsersListResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_Acquire">
+<wsdl:input name="TEBIBrokerInterface_Acquire" message="ns1:TEBIBrokerInterface_Acquire"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_AcquireResponse" message="ns1:TEBIBrokerInterface_AcquireResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_TransformationEx">
+<wsdl:input name="TEBIBrokerInterface_TransformationEx" message="ns1:TEBIBrokerInterface_TransformationEx"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_TransformationExResponse" message="ns1:TEBIBrokerInterface_TransformationExResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_SubscriptionWS" parameterOrder="aClientId aUser aPassword aDomain aApplication aSchema aTransformation aReference aMessage aMessageFormat">
+<wsdl:input name="TEBIBrokerInterface_SubscriptionWS" message="ns1:TEBIBrokerInterface_SubscriptionWS"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_SubscriptionWSResponse" message="ns1:TEBIBrokerInterface_SubscriptionWSResponse"> </wsdl:output>
+<wsdl:fault name="EBIBrokerServerException" message="ns1:EBIBrokerServerException"> </wsdl:fault>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_GetMessage">
+<wsdl:input name="TEBIBrokerInterface_GetMessage" message="ns1:TEBIBrokerInterface_GetMessage"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_GetMessageResponse" message="ns1:TEBIBrokerInterface_GetMessageResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_ExecuteScript" parameterOrder="aSessionId aDomain aApplication aScriptName aProcessId aScriptLanguage">
+<wsdl:input name="TEBIBrokerInterface_ExecuteScript" message="ns1:TEBIBrokerInterface_ExecuteScript"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_ExecuteScriptResponse" message="ns1:TEBIBrokerInterface_ExecuteScriptResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_ConfirmSubscription">
+<wsdl:input name="TEBIBrokerInterface_ConfirmSubscription" message="ns1:TEBIBrokerInterface_ConfirmSubscription"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_ConfirmSubscriptionResponse" message="ns1:TEBIBrokerInterface_ConfirmSubscriptionResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_EBIBrokerProfile">
+<wsdl:input name="TEBIBrokerInterface_EBIBrokerProfile" message="ns1:TEBIBrokerInterface_EBIBrokerProfile"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_EBIBrokerProfileResponse" message="ns1:TEBIBrokerInterface_EBIBrokerProfileResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_DocumentDeleteOld">
+<wsdl:input name="TEBIBrokerInterface_DocumentDeleteOld" message="ns1:TEBIBrokerInterface_DocumentDeleteOld"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_DocumentDeleteOldResponse" message="ns1:TEBIBrokerInterface_DocumentDeleteOldResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_RejectSubscription">
+<wsdl:input name="TEBIBrokerInterface_RejectSubscription" message="ns1:TEBIBrokerInterface_RejectSubscription"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_RejectSubscriptionResponse" message="ns1:TEBIBrokerInterface_RejectSubscriptionResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="TEBIBrokerInterface_Subscription">
+<wsdl:input name="TEBIBrokerInterface_Subscription" message="ns1:TEBIBrokerInterface_Subscription"> </wsdl:input>
+<wsdl:output name="TEBIBrokerInterface_SubscriptionResponse" message="ns1:TEBIBrokerInterface_SubscriptionResponse"> </wsdl:output>
+</wsdl:operation>
+</wsdl:portType>
+</wsdl:definitions>

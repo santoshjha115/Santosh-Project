@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:RenderSchema="http://www.example.org/RenderSchema" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_sI5uoIawEeeXRuz6USLGKA" name="test.DataFormatResource" type="dataformat:DataFormat">
+  <imports xmi:id="_nRxOsIb_Eeeh_P0iSevU6w" importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/RenderSchema"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_sI6VsIawEeeXRuz6USLGKA" formatType="Delimiter separated" colSeparator="\t" colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="RenderSchema:breakfast_menu" lineLength="1" fieldOffsetsStr="Part.ReferencePart.Value(0,0)&#xA;Part.Site.Value(0,0)&#xA;Type.Value(0,0)&#xA;Quantity(0,0)&#xA;Date(0,0)&#xA;Location.Id(0,0)&#xA;Location.Warehouse.Id(0,0)&#xA;ExpiryDate(0,0)&#xA;U_Inventory_Status(0,0)&#xA;U_Lot_Number(0,0)&#xA;U_GMIDPart(0,0)&#xA;U_GMIDSCDesc(0,0)">
+    <fieldOffsets xmi:id="_nTcCoIb_Eeeh_P0iSevU6w" name="Part.ReferencePart.Value"/>
+    <fieldOffsets xmi:id="_nTcpsIb_Eeeh_P0iSevU6w" name="Part.Site.Value"/>
+    <fieldOffsets xmi:id="_nTcpsYb_Eeeh_P0iSevU6w" name="Type.Value"/>
+    <fieldOffsets xmi:id="_nTcpsob_Eeeh_P0iSevU6w" name="Quantity"/>
+    <fieldOffsets xmi:id="_nTcps4b_Eeeh_P0iSevU6w" name="Date"/>
+    <fieldOffsets xmi:id="_nTcptIb_Eeeh_P0iSevU6w" name="Location.Id"/>
+    <fieldOffsets xmi:id="_nTcptYb_Eeeh_P0iSevU6w" name="Location.Warehouse.Id"/>
+    <fieldOffsets xmi:id="_nTcptob_Eeeh_P0iSevU6w" name="ExpiryDate"/>
+    <fieldOffsets xmi:id="_nTcpt4b_Eeeh_P0iSevU6w" name="U_Inventory_Status"/>
+    <fieldOffsets xmi:id="_nTcpuIb_Eeeh_P0iSevU6w" name="U_Lot_Number"/>
+    <fieldOffsets xmi:id="_nTcpuYb_Eeeh_P0iSevU6w" name="U_GMIDPart"/>
+    <fieldOffsets xmi:id="_nTcpuob_Eeeh_P0iSevU6w" name="U_GMIDSCDesc"/>
+  </jndi:configuration>
+</jndi:namedResource>
